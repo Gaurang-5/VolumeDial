@@ -1,0 +1,15 @@
+# IDE related files
+.idea/
+.vscode/
+
+# Default C exclusions
+*.o
+*.a
+
+# Project specific files & directories
+.objects/
+library/
+m1ddc
+
+# macOS related files
+.DS_Store

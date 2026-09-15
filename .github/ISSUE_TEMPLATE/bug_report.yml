@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a Volume Dial problem or an unsupported audio setup.
+title: "[Bug]: "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Volume Dial version
+    validations:
+      required: true
+  - type: input
+    id: mac
+    attributes:
+      label: Mac model and macOS version
+      placeholder: MacBook Pro M3, macOS 15.7
+    validations:
+      required: true
+  - type: textarea
+    id: outputs
+    attributes:
+      label: Audio outputs and connection
+      description: Include monitor/headphone model, cable, dock or adapter, and multi-output members if applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: What happened?
+      description: Include reproduction steps, expected behavior, and actual behavior. Omit private audio recordings and personal information.
+    validations:
+      required: true
