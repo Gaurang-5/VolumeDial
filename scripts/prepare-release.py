@@ -85,8 +85,8 @@ def main():
             raise ValueError("Project license missing from app")
         if prepared.testzip() is not None:
             raise ValueError("Prepared ZIP failed its integrity check")
-    files = [ROOT / name for name in ("Package.swift", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", ".gitignore", "build.sh", "docs/RELEASING.md", f"docs/releases/{TAG}.md")]
-    for folder in ("Sources", "Tests", "scripts", ".github", "Vendor/m1ddc"):
+    files = [ROOT / name for name in ("Package.swift", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", ".gitignore", "build.sh", "docs/RELEASING.md", "docs/COMPATIBILITY.md", f"docs/releases/{TAG}.md")]
+    for folder in ("Sources", "Tests", "scripts", ".github", "Vendor/m1ddc", "docs/images"):
         files.extend(path for path in (ROOT / folder).rglob("*") if path.is_file()
                      and not any(part in (".git", ".objects", "__pycache__", "library") for part in path.parts)
                      and path.name not in ("m1ddc", ".DS_Store"))

@@ -2,7 +2,7 @@
 
 ## Prepared release
 
-- Proposed repository: `Gaurang-5/VolumeDial` (public, MIT license).
+- Repository: `Gaurang-5/VolumeDial` (public, MIT license).
 - Tag: `v1.1.0-beta.1`.
 - Title: `Volume Dial 1.1.0 — Apple Silicon beta`.
 - Mark as **pre-release**; keep it as a **draft** until the files and notes have been reviewed.
@@ -12,9 +12,11 @@
 
 The packager checks that both tested executables remain byte-for-byte unchanged outside their embedded code signatures. Adding the license changes the app's signed resource hash, so that signing data is expected to change.
 
+Run `bash scripts/create-dmg.sh v1.1.0-beta.1` after staging to package the verified app ZIP into a DMG with an Applications shortcut. This also refreshes checksums for the DMG and both ZIPs. The script refuses to overwrite an existing DMG. Verify the disk image and its app signature before upload. Do not regenerate assets already published under a version tag.
+
 ## Before publication
 
-Review `RELEASE_NOTES.md`, the two ZIPs, and `SHA256SUMS.txt` in the staged release directory. The public repository should contain the files in the prepared source archive, not the `dist` directory. Release assets belong on the GitHub release.
+Review `RELEASE_NOTES.md`, the DMG, the two ZIPs, and `SHA256SUMS.txt` in the staged release directory. The public repository should contain the files in the prepared source archive, not the `dist` directory. Release assets belong on the GitHub release.
 
 The current build is ad-hoc signed and **not notarized**. For this beta, the release notes disclose that macOS may block first launch and link to Apple's installation guidance. Do not describe this build as Apple-verified or as tested on every M-series Mac or external monitor.
 
@@ -32,6 +34,7 @@ gh release create v1.1.0-beta.1 \
   --verify-tag --draft --prerelease \
   --title 'Volume Dial 1.1.0 — Apple Silicon beta' \
   --notes-file dist/releases/v1.1.0-beta.1/RELEASE_NOTES.md \
+  dist/releases/v1.1.0-beta.1/Volume-Dial-1.1.0-beta.1-Apple-Silicon.dmg \
   dist/releases/v1.1.0-beta.1/Volume-Dial-1.1.0-beta.1-Apple-Silicon.zip \
   dist/releases/v1.1.0-beta.1/Volume-Dial-1.1.0-beta.1-Source.zip \
   dist/releases/v1.1.0-beta.1/SHA256SUMS.txt
