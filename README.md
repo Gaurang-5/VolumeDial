@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/images/logo.png" alt="Volume Dial app icon" width="112"></p>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/hero-dark.svg">
   <img src="docs/images/hero-light.svg" alt="Volume Dial — Sound, with a softer touch." width="100%">
@@ -5,10 +7,10 @@
 
 <p align="center">A sculpted volume knob for your Mac. Always in the menu bar. Just a turn away.</p>
 <p align="center">
-  <a href="https://github.com/Gaurang-5/VolumeDial/releases/download/v1.1.0-beta.1/Volume-Dial-1.1.0-beta.1-Apple-Silicon.dmg"><img src="docs/images/download.svg" alt="Download Volume Dial DMG for Apple Silicon" width="300"></a>
+  <a href="https://github.com/Gaurang-5/VolumeDial/releases/download/v1.1.0-beta.2/Volume-Dial-1.1.0-beta.2-Apple-Silicon.dmg"><img src="docs/images/download.svg" alt="Download Volume Dial DMG for Apple Silicon" width="300"></a>
 </p>
 <p align="center"><img src="docs/images/badges.svg" alt="Apple Silicon · macOS 14+ · MIT licensed · Open beta" width="522"></p>
-<p align="center"><a href="https://github.com/Gaurang-5/VolumeDial/releases/tag/v1.1.0-beta.1">Release notes</a> · <a href="#install-in-a-moment">Installation</a> · <a href="https://github.com/Gaurang-5/VolumeDial/issues/new/choose">Report an issue</a></p>
+<p align="center"><a href="https://github.com/Gaurang-5/VolumeDial/releases/tag/v1.1.0-beta.2">Release notes</a> · <a href="#install-in-a-moment">Installation</a> · <a href="https://github.com/Gaurang-5/VolumeDial/issues/new/choose">Report an issue</a></p>
 
 ## Two finishes. One good feeling.
 
@@ -32,7 +34,7 @@ Real app screenshots. Switch finishes with the sun/moon button, or follow your M
 
 ## Install in a moment
 
-1. **[Download the DMG](https://github.com/Gaurang-5/VolumeDial/releases/download/v1.1.0-beta.1/Volume-Dial-1.1.0-beta.1-Apple-Silicon.dmg).**
+1. **[Download the DMG](https://github.com/Gaurang-5/VolumeDial/releases/download/v1.1.0-beta.2/Volume-Dial-1.1.0-beta.2-Apple-Silicon.dmg).**
 2. Open it and drag **Volume Dial** into **Applications**.
 3. Open Volume Dial from Applications. Look for the dial in your menu bar.
 

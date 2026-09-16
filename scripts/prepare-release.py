@@ -11,9 +11,9 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TAG = "v1.1.0-beta.1"
-ASSET = "Volume-Dial-1.1.0-beta.1-Apple-Silicon.zip"
-SOURCE_ASSET = "Volume-Dial-1.1.0-beta.1-Source.zip"
+TAG = "v1.1.0-beta.2"
+ASSET = "Volume-Dial-1.1.0-beta.2-Apple-Silicon.zip"
+SOURCE_ASSET = "Volume-Dial-1.1.0-beta.2-Source.zip"
 
 
 def inspect_binary(data):
@@ -86,7 +86,7 @@ def main():
         if prepared.testzip() is not None:
             raise ValueError("Prepared ZIP failed its integrity check")
     files = [ROOT / name for name in ("Package.swift", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", ".gitignore", "build.sh", "docs/RELEASING.md", "docs/COMPATIBILITY.md", f"docs/releases/{TAG}.md")]
-    for folder in ("Sources", "Tests", "scripts", ".github", "Vendor/m1ddc", "docs/images"):
+    for folder in ("Resources", "Sources", "Tests", "scripts", ".github", "Vendor/m1ddc", "docs/images"):
         files.extend(path for path in (ROOT / folder).rglob("*") if path.is_file()
                      and not any(part in (".git", ".objects", "__pycache__", "library") for part in path.parts)
                      and path.name not in ("m1ddc", ".DS_Store"))

@@ -12,6 +12,7 @@ make -B -C Vendor/m1ddc SDKROOT="$SDK_PATH"
 mkdir -p "$APP/Contents/Helpers"
 cp Vendor/m1ddc/m1ddc "$APP/Contents/Helpers/m1ddc"
 cp Vendor/m1ddc/LICENSE "$APP/Contents/Resources/m1ddc-LICENSE.txt"
+cp Resources/VolumeDial.icns "$APP/Contents/Resources/VolumeDial.icns"
 cp LICENSE "$APP/Contents/Resources/Volume-Dial-LICENSE.txt"
 codesign --force --sign - "$APP/Contents/Helpers/m1ddc"
 cp "$SWIFT_BIN_DIR/VolumeDial" "$APP/Contents/MacOS/VolumeDial"
@@ -23,9 +24,10 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
 <key>CFBundleIdentifier</key><string>com.gaurang.volumedial</string>
 <key>CFBundleName</key><string>Volume Dial</string>
 <key>CFBundleDisplayName</key><string>Volume Dial</string>
+<key>CFBundleIconFile</key><string>VolumeDial</string>
 <key>CFBundlePackageType</key><string>APPL</string>
 <key>CFBundleShortVersionString</key><string>1.1.0</string>
-<key>CFBundleVersion</key><string>2</string>
+<key>CFBundleVersion</key><string>3</string>
 <key>LSMinimumSystemVersion</key><string>14.0</string>
 <key>LSUIElement</key><true/>
 <key>NSHighResolutionCapable</key><true/>

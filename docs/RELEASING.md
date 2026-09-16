@@ -3,16 +3,16 @@
 ## Prepared release
 
 - Repository: `Gaurang-5/VolumeDial` (public, MIT license).
-- Tag: `v1.1.0-beta.1`.
+- Tag: `v1.1.0-beta.2`.
 - Title: `Volume Dial 1.1.0 — Apple Silicon beta`.
 - Mark as **pre-release**; keep it as a **draft** until the files and notes have been reviewed.
-- Assets are staged under `dist/releases/v1.1.0-beta.1/`.
+- Assets are staged under `dist/releases/v1.1.0-beta.2/`.
 
 `python3 scripts/prepare-release.py` verifies the existing app ZIP, checks both Mach-O binaries for arm64 and macOS 14, includes the project license, re-signs the staged bundle ad hoc, and creates app/source ZIPs with checksums. It does not modify the running app or publish anything. Source packaging excludes `.git`, compiler output, local app bundles, and internal planning documents.
 
 The packager checks that both tested executables remain byte-for-byte unchanged outside their embedded code signatures. Adding the license changes the app's signed resource hash, so that signing data is expected to change.
 
-Run `bash scripts/create-dmg.sh v1.1.0-beta.1` after staging to package the verified app ZIP into a DMG with an Applications shortcut. This also refreshes checksums for the DMG and both ZIPs. The script refuses to overwrite an existing DMG. Verify the disk image and its app signature before upload. Do not regenerate assets already published under a version tag.
+Run `bash scripts/create-dmg.sh v1.1.0-beta.2` after staging to package the verified app ZIP into a DMG with an Applications shortcut. This also refreshes checksums for the DMG and both ZIPs. The script refuses to overwrite an existing DMG. Verify the disk image and its app signature before upload. Do not regenerate assets already published under a version tag.
 
 ## Before publication
 
@@ -26,18 +26,18 @@ For a general release, configure a Developer ID Application identity, sign the h
 
 ## GitHub draft
 
-After the repository's source commit and `v1.1.0-beta.1` tag exist, create a draft with the prepared notes and assets. GitHub's [release documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) covers reviewing and publishing the draft.
+After the repository's source commit and `v1.1.0-beta.2` tag exist, create a draft with the prepared notes and assets. GitHub's [release documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) covers reviewing and publishing the draft.
 
 ```sh
-gh release create v1.1.0-beta.1 \
+gh release create v1.1.0-beta.2 \
   --repo Gaurang-5/VolumeDial \
   --verify-tag --draft --prerelease \
   --title 'Volume Dial 1.1.0 — Apple Silicon beta' \
-  --notes-file dist/releases/v1.1.0-beta.1/RELEASE_NOTES.md \
-  dist/releases/v1.1.0-beta.1/Volume-Dial-1.1.0-beta.1-Apple-Silicon.dmg \
-  dist/releases/v1.1.0-beta.1/Volume-Dial-1.1.0-beta.1-Apple-Silicon.zip \
-  dist/releases/v1.1.0-beta.1/Volume-Dial-1.1.0-beta.1-Source.zip \
-  dist/releases/v1.1.0-beta.1/SHA256SUMS.txt
+  --notes-file dist/releases/v1.1.0-beta.2/RELEASE_NOTES.md \
+  dist/releases/v1.1.0-beta.2/Volume-Dial-1.1.0-beta.2-Apple-Silicon.dmg \
+  dist/releases/v1.1.0-beta.2/Volume-Dial-1.1.0-beta.2-Apple-Silicon.zip \
+  dist/releases/v1.1.0-beta.2/Volume-Dial-1.1.0-beta.2-Source.zip \
+  dist/releases/v1.1.0-beta.2/SHA256SUMS.txt
 ```
 
 Review the uploaded files and notes, then publish the pre-release when approved. Keep account credentials, signing certificates, and private keys out of the repository and release assets.

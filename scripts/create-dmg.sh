@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-TAG="${1:-v1.1.0-beta.1}"
+TAG="${1:-v1.1.0-beta.2}"
 VERSION="${TAG#v}"
 RELEASE="$ROOT/dist/releases/$TAG"
 NAME="Volume-Dial-$VERSION-Apple-Silicon"
